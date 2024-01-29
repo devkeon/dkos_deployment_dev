@@ -33,7 +33,7 @@ spec:
                 secretKeyRef:
                   name: db-secret
                   key: db-password
-            - name: JWT_SECRET
+            - name: JWT_SIGN
               valueFrom:
                 secretKeyRef:
                   name: jwt-secret
