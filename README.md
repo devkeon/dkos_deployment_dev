@@ -6,6 +6,7 @@
 - nginx 설정 파일
 - 리버스 프록시로 사용, Front & Back 또한 리버스 프록시로 같이 사용 중
 - cors 설정 해제 완료
+- 웹소켓 upgrade 설정
 
 ### k8s/backend.yaml
 - image의 todo 부분 D2Hub image url로 전환 필요
