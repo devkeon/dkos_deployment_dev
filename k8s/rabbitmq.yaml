@@ -53,7 +53,6 @@ metadata:
   name: rabbitmq
 spec:
   type: ClusterIP
-  clusterIP: None # Headless
   selector:
     app: rabbitmq
   ports:
