@@ -42,12 +42,12 @@ spec:
               value: "15672" # RabbitMQ Management 포트 (todo: 앱 배포 시 삭제)
             - name: RABBITMQ_STOMP_PORT
               value: "61613" # RabbitMQ STOMP 포트
-            - name: RABBITMQ_DEFAULT_USER
+            - name: SPRING_RABBITMQ_USERNAME
               valueFrom:
                 secretKeyRef:
                   name: rabbitmq-secret
                   key: username
-            - name: RABBITMQ_DEFAULT_PASS
+            - name: SPRING_RABBITMQ_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: rabbitmq-secret
