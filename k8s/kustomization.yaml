@@ -3,6 +3,7 @@ resources:
   - nginx.yaml
   - mysql.yaml
   - backend.yaml
+  - rabbitmq.yaml
 configMapGenerator:
   - name: nginx
     files:
