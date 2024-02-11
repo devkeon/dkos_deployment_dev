@@ -33,6 +33,26 @@ spec:
                 secretKeyRef:
                   name: db-secret
                   key: db-password
+            # RabbitMQ 환경 변수 추가 시작
+            - name: RABBITMQ_HOST
+              value: rabbitmq  # RabbitMQ 서비스 이름 사용
+            - name: RABBITMQ_PORT
+              value: "5672"  # RabbitMQ 기본 AMQP 포트
+            - name: RABBITMQ_MANAGEMENT_PORT
+              value: "15672" # RabbitMQ Management 포트 (todo: 앱 배포 시 삭제)
+            - name: RABBITMQ_STOMP_PORT
+              value: "61613" # RabbitMQ STOMP 포트
+            - name: RABBITMQ_DEFAULT_USER
+              valueFrom:
+                secretKeyRef:
+                  name: rabbitmq-secret
+                  key: username
+            - name: RABBITMQ_DEFAULT_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: rabbitmq-secret
+                  key: password
+
             - name: JWT_SIGN
               valueFrom:
                 secretKeyRef:
