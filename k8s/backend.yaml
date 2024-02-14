@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: krmp-d2hub-idock.9rum.cc/dev-test/repo_c4c3311e72cb
+          image: krmp-d2hub-idock.9rum.cc/dev-test/repo_2ca5b8e42438
           env:
             - name: TZ
               value: Asia/Seoul
