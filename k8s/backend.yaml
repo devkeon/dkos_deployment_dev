@@ -68,6 +68,11 @@ spec:
                 secretKeyRef:
                   name: oauth-secret
                   key: redirect-uri
+            - name: FIREBASE_ADMIN_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: firebase-secret
+                  key: firebase-admin-key
           resources:
             requests:
               memory: 1Gi
